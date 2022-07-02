@@ -24,7 +24,9 @@ class Controller {
 
     static async fetchAllProducts(req, res, next) {
         try {
-            const products = await Product.findAll();
+            const products = await Product.findAll({
+                where: { isActive: true },
+            });
 
             res.status(200).json(products);
         } catch (error) {

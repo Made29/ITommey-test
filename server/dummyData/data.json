@@ -5,5 +5,33 @@
         "picture": "https://shopee.co.id/Tango-Wafer-163g-i.55898691.9838519224",
         "expiredAt": "2023-11-25",
         "isActive": true
+    },
+    {
+        "name": "Biskuat",
+        "qty": 3,
+        "picture": "https://www.kalcare.com/estore/biskuat-original-140gr",
+        "expiredAt": "2025-11-25",
+        "isActive": true
+    },
+    {
+        "name": "Roma Kelapa",
+        "qty": 2,
+        "picture": "https://www.tokopedia.com/majucirebon/biskuit-roma-kelapa-300gr",
+        "expiredAt": "2022-11-29",
+        "isActive": false
+    },
+    {
+        "name": "SilverQueen",
+        "qty": 5,
+        "picture": "https://www.bukalapak.com/p/food/cemilan-snack/11qzwzt-jual-silverqueen-cashew-30gr-coklat-silver-queen-kacang-mede-30-gram",
+        "expiredAt": "2022-10-30",
+        "isActive": true
+    },
+    {
+        "name": "Kokokrunch",
+        "qty": 3,
+        "picture": "https://www.nestle-cereals.com/id/produk-promosi/merek/merek-kokokrunch/koko-krunch-330g",
+        "expiredAt": "2024-07-11",
+        "isActive": false
     }
 ]

@@ -39,3 +39,27 @@ The backend side will manage product, with REST over HTTP API request:
 9. Endpoint of logging activity, unit testing, and Swagger API docs are optional
 10. Write clean and effective code for example: proper project structure, exception handling, parameterize config, etc.
 11. Push your work to your GitHub repository, make sure your repository accessible to public.
+
+Tugas:
+
+CRUD:
+[x] add product 
+[x] get all product
+[x] get product by id
+[x] soft delete 
+[x] edit product
+
+spesification:
+[] picture: TEXT with Base64 value
+[] expiredAt: DATE YYYY-MM-DD
+[] pegination (optional)
+[x] sorter
+[] Filtering product by specific criteria
+[x] Post a product always set isActive value to true
+[x] Updating product should block isActive value from body payloads
+[x] For getting product should returned with true value in isActive field
+
+optional: 
+[] unit testing
+[] Swagger API docs
+[] Endpoint of logging activity

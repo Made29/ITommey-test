@@ -14,11 +14,46 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Product.init({
-    name: DataTypes.STRING,
-    qty: DataTypes.INTEGER,
-    picture: DataTypes.TEXT,
-    expiredAt: DataTypes.DATE,
-    isActive: DataTypes.BOOLEAN
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isNull: { msg: "Name cant be empty" },
+        notEmpty: { msg: "Name cant be empty" }
+      }
+    }, 
+    qty: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        isNull: { msg: "quantity cant be empty" },
+        notEmpty: { msg: "quantity cant be empty" }
+      }
+    }, 
+    picture: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        isNull: { msg: "Picture cant be empty" },
+        notEmpty: { msg: "Picture cant be empty" }
+      }
+    }, 
+    expiredAt: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      validate: {
+        isNull: { msg: "Expired date cant be empty" },
+        notEmpty: { msg: "Expired date cant be empty" }
+      }
+    }, 
+    isActive: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      validate: {
+        isNull: { msg: "Status product cant be empty" },
+        notEmpty: { msg: "Status product cant be empty" }
+      }
+    }, 
   }, {
     sequelize,
     modelName: 'Product',
