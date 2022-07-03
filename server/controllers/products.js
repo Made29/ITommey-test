@@ -5,12 +5,13 @@ class Controller {
     static async addProduct(req, res, next) {
         try {
             const { name, qty, picture, expiredAt } = req.body;
-            console.log("req.body: ", req.body);
+
+            let data = "data:" + req.headers["content-type"] + ";base64," + Buffer.from(picture).toString('base64');
 
             const newProduct = await Product.create({
                 name,
                 qty,
-                picture,
+                picture: data,
                 expiredAt,
                 isActive: true,
             });
@@ -20,6 +21,7 @@ class Controller {
                 newProduct,
             });
         } catch (error) {
+            console.log("error: ", error);
             next(error);
         }
     }
