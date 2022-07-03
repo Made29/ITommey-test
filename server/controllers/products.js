@@ -1,9 +1,11 @@
 const { Product } = require("../models");
+const { Op } = require("sequelize");
 
 class Controller {
     static async addProduct(req, res, next) {
         try {
             const { name, qty, picture, expiredAt } = req.body;
+            console.log("req.body: ", req.body);
 
             const newProduct = await Product.create({
                 name,
@@ -23,10 +25,42 @@ class Controller {
     }
 
     static async fetchAllProducts(req, res, next) {
+        const { filter, sort, page } = req.query;
+        const productFilter = { where: { isActive: true }, attributes: { exclude: ["createdAt", "updatedAt"] } };
+
+        if (filter) {
+            if (filter.name) {
+                const query = filter.name;
+
+                productFilter.where = {
+                    name: {
+                        [Op.substring]: query,
+                    },
+                };
+            }
+        }
+
+        if (sort) {
+            productFilter.order = [[sort, "ASC"]];
+        }
+
+        let limit;
+        let offset;
+
+        if(page){
+            if(page.size){
+                limit = page.size
+                productFilter.limit = limit
+            }
+
+            if(page.number){
+                offset = page.number * limit - limit
+                productFilter.offset = offset
+            }
+        }
+
         try {
-            const products = await Product.findAll({
-                where: { isActive: true },
-            });
+            const products = await Product.findAll(productFilter);
 
             res.status(200).json(products);
         } catch (error) {
@@ -57,9 +91,12 @@ class Controller {
             const { id } = req.params;
             const { isActive } = req.body;
 
-            const product = await Product.update({ isActive: isActive }, {
-                where: { id }
-            });
+            const product = await Product.update(
+                { isActive: isActive },
+                {
+                    where: { id },
+                }
+            );
 
             if (!product) {
                 throw {
@@ -68,7 +105,7 @@ class Controller {
                 };
             }
 
-            res.status(200).json({ message: "status has been updated" })
+            res.status(200).json({ message: "status has been updated" });
         } catch (error) {
             next(error);
         }

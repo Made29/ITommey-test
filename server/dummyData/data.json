@@ -2,36 +2,71 @@
     {
         "name": "Tango",
         "qty": 1,
-        "picture": "https://shopee.co.id/Tango-Wafer-163g-i.55898691.9838519224",
+        "picture": "https://cf.shopee.co.id/file/a7c3215798ef5c5cefb5666e46f4d9b4",
         "expiredAt": "2023-11-25",
         "isActive": true
     },
     {
         "name": "Biskuat",
         "qty": 3,
-        "picture": "https://www.kalcare.com/estore/biskuat-original-140gr",
+        "picture": "https://assets.klikindomaret.com/products/20013662/20013662_2.jpg",
         "expiredAt": "2025-11-25",
         "isActive": true
     },
     {
         "name": "Roma Kelapa",
         "qty": 2,
-        "picture": "https://www.tokopedia.com/majucirebon/biskuit-roma-kelapa-300gr",
+        "picture": "https://assets.klikindomaret.com/share/10031595/10031595_1.jpg",
         "expiredAt": "2022-11-29",
-        "isActive": false
+        "isActive": true
     },
     {
         "name": "SilverQueen",
         "qty": 5,
-        "picture": "https://www.bukalapak.com/p/food/cemilan-snack/11qzwzt-jual-silverqueen-cashew-30gr-coklat-silver-queen-kacang-mede-30-gram",
+        "picture": "https://s3.bukalapak.com/img/8843887328/large/SILVERQUEEN_CASHEW_30gr_Coklat_Silver_queen_kacang_mede_30_g.jpg",
         "expiredAt": "2022-10-30",
         "isActive": true
     },
     {
         "name": "Kokokrunch",
         "qty": 3,
-        "picture": "https://www.nestle-cereals.com/id/produk-promosi/merek/merek-kokokrunch/koko-krunch-330g",
+        "picture": "https://cf.shopee.co.id/file/a40d030970d2da25442d5a02d6b3be05",
         "expiredAt": "2024-07-11",
         "isActive": false
+    },
+    {
+        "name": "Biskuit Gery",
+        "qty": 6,
+        "picture": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//105/MTA-3970985/gery_gery_saluut_malkist_sweet_cheese_biskuit_-110_g-_full02.jpg",
+        "expiredAt": "2023-07-08",
+        "isActive": false
+    },
+    {
+        "name": "Kusuka",
+        "qty": 4,
+        "picture": "https://assets.klikindomaret.com/share/20093110_1.jpg",
+        "expiredAt": "2022-12-25",
+        "isActive": true
+    },
+    {
+        "name": "Roma Sari Gandum",
+        "qty": 7,
+        "picture": "https://assets.klikindomaret.com/products/20045132/20045132_1.jpg",
+        "expiredAt": "2023-01-29",
+        "isActive": true
+    },
+    {
+        "name": "Pilus Garuda",
+        "qty": 9,
+        "picture": "https://cf.shopee.co.id/file/ce2086b3368b9bf81a1c7d60c9dde3fe",
+        "expiredAt": "2025-01-01",
+        "isActive": false
+    },
+    {
+        "name": "Taro",
+        "qty": 7,
+        "picture": "https://images.tokopedia.net/img/cache/700/product-1/2019/5/9/26743791/26743791_54179488-82bf-4759-88d2-7973348f87d9_500_500",
+        "expiredAt": "2025-01-01",
+        "isActive": true
     }
 ]
